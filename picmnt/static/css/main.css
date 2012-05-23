@@ -1,0 +1,12 @@
+html {
+    background: url(http://passets-cdn.pinterest.com/images/paper.jpg) repeat;
+}
+
+#image {
+    text-align: center;
+}
+
+#reload_buttom{
+    float: right;
+    width: 80px;
+}
