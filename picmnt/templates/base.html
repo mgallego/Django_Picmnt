@@ -10,6 +10,17 @@
     <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
     {% block extra_css %}{% endblock %}
 
+    {% load compress %}
+    {% if debug %}
+       <link rel="stylesheet/less" type="text/css" media="all" href="/static/less/style.less" />
+       <script src="/static/js/less.min.js"></script>
+    {% else %}
+       {% compress css %}
+           <link rel="stylesheet" type="text/less" media="all" href="/static/less/style.less" />
+       {% endcompress %}
+    {% endif %}
+	   
+    {% block extra_less %}{% endblock %}
 
     {% block extra_js %}{% endblock %}
   </head>
