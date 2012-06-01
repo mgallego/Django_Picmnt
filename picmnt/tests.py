@@ -1,10 +1,7 @@
 from django.test import TestCase, LiveServerTestCase
 from selenium import webdriver
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
-import time
 from pyvirtualdisplay import Display
-import os
+
 
 class ImageTest(LiveServerTestCase):
 
@@ -18,8 +15,12 @@ class ImageTest(LiveServerTestCase):
         self.browser.quit()
         self.display.stop()
 
+    def test_main_page(self):
+        self.browser.get(self.SERVER + '/')
+        title = self.browser.title
+        self.assertIn('Picmnt', title)
+
     def test_random_image(self):
         self.browser.get(self.SERVER + '/random')
-        body = self.browser.find_element_by_tag_name('body')
-        self.assertIn('Home', body.text)
-        
+        title = self.browser.title
+        self.assertIn('Picmnt', title)

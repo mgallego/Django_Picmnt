@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container_12">
-    <a href="javascript:location.reload(true)"><img id="reload_buttom" alt="refresh" src="http://s2.alt1040.com/files/2011/01/rounded_blue_refresh_button_4808.jpg" /></a>
-    <div class="clear"></div>
     <section id="image">
 	<div class="grid_12">
 	    <h1>Imagen Aleatoria</h1>
 	    <h2>{{ image.title }}</h2>
-	    <img src={{ image.url }} alt="{{ image.title }}" class="main_image"/>
+	    <div class="main-image">
+		<img src={{ image.url }} alt="{{ image.title }}" />
+	    </div>
 	    <h4>{{ image.description }}</h4>
 	</div>
     </section>

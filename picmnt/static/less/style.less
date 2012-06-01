@@ -1,11 +1,25 @@
-@bgimage: url(/static/images/bg.jpg) repeat;
+@bgimage: url(/static/images/bg.jpg) fixed;
 @bgcolor: black;
+@imageBak: rgba(255,255,255,0.2);
 
 html{
-  background: @bgcolor @bgimage;
-  color: lightgray;
+    background: @bgcolor @bgimage;
+    color: lightgray;
+}
+
+
+#image{
+    background: @imageBak;
+    margin: 0 auto;
+    max-width: 900px;
+    min-width: 600px;
+    height: 2000px;
+}
+
+#image h1, #image .main-image{
+    text-align: center;
 }
 
 #main-nav li a{ 
-  color: white; 
+    color: white; 
 }
