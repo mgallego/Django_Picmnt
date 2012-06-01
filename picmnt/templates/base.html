@@ -25,9 +25,23 @@
   <body>
       <header>
 	  <nav id="main-nav">
-	      <ul>
-		  <li><a href="/">Home</a>
-	      </ul>
+	      <article class="menu-links">
+		  <ul>
+		      <li><a href="/">Home</a>
+		      <li><a href="/">Link1</a>
+		      <li><a href="/">Link2</a>
+		      <li><a href="/">Link3</a>
+		  </ul>
+	      </article>
+	      <article class="menu-title">
+		   {% block image-title %}{% endblock %}
+	      </article>
+	      <article class="menu-login">
+		  <ul>
+		      <li><a href="#">Login</a></li>
+		      <li><a href="#">Register</a></li>
+		  </ul>
+	      </article>
 	  </nav>
       </header>
     {% block content %}{% endblock %}
