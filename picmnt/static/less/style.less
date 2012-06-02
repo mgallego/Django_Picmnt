@@ -1,21 +1,23 @@
-@bgimage: url(/static/images/bg.jpg) fixed;
+@bgimage: url(/static/images/bg.jpg);
+@htmlBody: @bgimage fixed;
+@htmlBodyMobile: @bgimage repeat;
 @bgcolor: black;
 @imageBack: rgba(255,255,255,0.2);
 @navBack: rgba(1,1,1,0.7);
+@bodyWidth: 750px;
 
 html{
-    background: @bgcolor @bgimage;
+    background: @bgcolor @htmlBody;
     color: lightgray;
 }
-
 
 #image{
     background: @imageBack;
     margin: 0 auto;
     margin-top: 60px;
     padding-top: 60px;
-    max-width: 900px;
-    min-width: 600px;
+    max-width: @bodyWidth;
+    min-width: 700px;
     height: 1505px;
     box-shadow: 4px 0px rgba(1,1,1,0.1);
 }
@@ -73,16 +75,41 @@ html{
 
 
 #main-nav article{
-    display: inline;
+    display: inline-block;
     padding-top: 15px;
 }
 
 #nav-picmnt{
     font-size: 1.7em;
     margin-right: 0.25em;
+
+}
+
+#nav-picmnt a{
+    text-decoration: none;
 }
 
 #img-usr-info p{
     margin-left: 150px;
     margin-bottom: 0;
+}
+
+@media screen and (max-width:1024px){
+    #nav-picmnt{
+	font-size: 2em;
+	margin-right: 1px;
+    }
+
+    .menu-login{
+	width: 20%;
+	display: block;
+	font-size: 1em;
+    } 
+
+    html{
+	background: @bgcolor @htmlBodyMobile;
+	color: lightgray;
+    }
+    
+
 }
