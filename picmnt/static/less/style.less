@@ -23,8 +23,25 @@ html{
 }
 
 
-#image img{
+#image-img img{
     box-shadow: 3px 3px rgba(0,0,0,0.2);
+    z-index: -1;
+}
+
+#image-img p{
+    position: absolute;
+    display: none;
+    text-shadow: 3px 3px rgba(0,0,0,0.2);
+    color: white;
+}
+
+#image-img:hover p{
+    display: block;
+}
+
+#image-img:hover img{
+    background: rgb(255,255,255);
+    opacity: 0.2;
 }
 
 #image h1, #image .main-image{
@@ -94,6 +111,7 @@ html{
     margin-bottom: 0;
 }
 
+
 @media screen and (max-width:1024px){
     #nav-picmnt{
 	font-size: 2em;
@@ -111,5 +129,13 @@ html{
 	color: lightgray;
     }
     
+
+    #image-img p{
+	position: relative;
+	text-shadow: 3px 3px rgba(0,0,0,0.2);
+	color: white;
+	display: block;
+    }
+
 
 }

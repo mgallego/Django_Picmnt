@@ -3,7 +3,7 @@
   <head>
     <title>Picmnt {% block head_title %}{% endblock %}</title>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"  />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"  />
     {% block meta %}{% endblock %}
     
     {% block extra_css %}{% endblock %}
@@ -20,6 +20,8 @@
 	   
     {% block extra_less %}{% endblock %}
 
+	   <script src="http://code.jquery.com/jquery.min.js"></script>
+	   <script src="/static/js/picmnt.js"></script>
     {% block extra_js %}{% endblock %}
   </head>
   <body>
