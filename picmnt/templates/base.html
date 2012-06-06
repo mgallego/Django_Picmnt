@@ -11,10 +11,12 @@
     {% load compress %}
     {% if debug %}
        <link rel="stylesheet/less" type="text/css" media="all" href="/static/less/style.less" />
+       <link rel="stylesheet/less" type="text/css" media="only screen and (max-device-width: 480px)" href="/static/less/style-mobile.less" />
        <script src="/static/js/less.min.js"></script>
     {% else %}
        {% compress css %}
            <link rel="stylesheet" type="text/less" media="all" href="/static/less/style.less" />
+	   <link rel="stylesheet" type="text/less" media="only screen and (max-device-width: 480px)" href="/static/less/style-mobile.less" />
        {% endcompress %}
     {% endif %}
 	   
